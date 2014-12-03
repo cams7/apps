@@ -15,7 +15,7 @@ import br.com.yaw.cdi.model.Mercadoria;
  * persistência de <code>Mercadoria</code>.
  * </p>
  * 
- * @see br.com.yaw.cdi.service.MercadoriaService
+ * @see br.com.yaw.cdi.service.ContaBancariaService
  * @author YaW Tecnologia
  */
 @Stateless
