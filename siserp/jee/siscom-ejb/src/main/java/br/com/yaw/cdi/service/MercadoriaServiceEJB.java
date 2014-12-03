@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.yaw.cdi.model.Mercadoria;
+import cams7.siscom.jpa.domain.entity.Mercadoria;
 
 /**
  * Componente <code>EJB</code> que implementa as operações de negócio da
@@ -22,7 +22,7 @@ import br.com.yaw.cdi.model.Mercadoria;
 public class MercadoriaServiceEJB extends AbstractPersistence<Mercadoria, Long>
 		implements MercadoriaService {
 
-	@PersistenceContext(unitName = "primary")
+	@PersistenceContext(unitName = "appSwingSpringUnit")
 	private EntityManager em;
 
 	@Override

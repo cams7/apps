@@ -10,7 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import com.mastertheboss.model.Member;
+import cams7.siscom.jpa.domain.entity.Member;
 
 /**
  * JAX-RS Example

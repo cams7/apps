@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
-import com.mastertheboss.model.Member;
+import cams7.siscom.jpa.domain.entity.Member;
 
 // The @Stateful annotation eliminates the need for manual transaction demarcation
 @Stateful

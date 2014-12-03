@@ -15,8 +15,9 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import cams7.siscom.jpa.domain.entity.Member;
+
 import com.mastertheboss.controller.MemberRegistration;
-import com.mastertheboss.model.Member;
 import com.mastertheboss.util.Resources;
 
 @RunWith(Arquillian.class)

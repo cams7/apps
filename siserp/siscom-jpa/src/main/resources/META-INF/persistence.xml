@@ -43,13 +43,17 @@
 		<class>cams7.siscom.jpa.domain.entity.UnidadeProdutoEntity</class>
 		<class>cams7.siscom.jpa.domain.entity.VendaCabecarioEntity</class>
 		<class>cams7.siscom.jpa.domain.entity.VendaDetalheEntity</class>
+		
+		<!-- TODO: Essas classe serao removida -->
+		<class>cams7.siscom.jpa.domain.entity.Mercadoria</class>
+		<class>cams7.siscom.jpa.domain.entity.Member</class>
 
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
-			<!-- property name="hibernate.hbm2ddl.auto" value="update" /-->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
 </persistence>

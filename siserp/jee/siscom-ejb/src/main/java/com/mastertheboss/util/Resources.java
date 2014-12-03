@@ -24,7 +24,7 @@ public class Resources {
 	// use @SuppressWarnings to tell IDE to ignore warnings about field not
 	// being referenced directly
 	@Produces
-	@PersistenceContext
+	@PersistenceContext(unitName = "appSwingSpringUnit")
 	private EntityManager em;
 
 	@Produces

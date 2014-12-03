@@ -1,4 +1,4 @@
-package com.mastertheboss.model;
+package cams7.siscom.jpa.domain.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

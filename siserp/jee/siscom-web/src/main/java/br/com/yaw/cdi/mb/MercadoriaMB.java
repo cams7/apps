@@ -11,7 +11,7 @@ import javax.faces.application.FacesMessage;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.com.yaw.cdi.model.Mercadoria;
+import cams7.siscom.jpa.domain.entity.Mercadoria;
 import br.com.yaw.cdi.service.MercadoriaService;
 
 /**

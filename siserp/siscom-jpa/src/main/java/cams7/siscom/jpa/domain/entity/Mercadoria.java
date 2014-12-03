@@ -1,4 +1,4 @@
-package br.com.yaw.cdi.model;
+package cams7.siscom.jpa.domain.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

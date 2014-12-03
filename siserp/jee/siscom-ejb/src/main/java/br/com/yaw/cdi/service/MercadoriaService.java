@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ejb.Local;
 
-import br.com.yaw.cdi.model.Mercadoria;
+import cams7.siscom.jpa.domain.entity.Mercadoria;
 
 /**
  * Determina a interface de negócio para estipular o serviço da entidade
