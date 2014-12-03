@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_30
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: cams7.siscom
+Implementation-Build: f57c0858c8410c2bf71f4fd063d0e0db7195a91a
+Built-By: Cesar Magalhaes
+Implementation-Title: SisCom-Sistema Comercial
+url: https://github.com/cams7/swing-spring-jpa-crud/tree/siserp/SisCom-App
+

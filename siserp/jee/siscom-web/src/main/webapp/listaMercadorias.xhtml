@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="pageTitle">
+		<h:outputText value="#{msg['page.title.lista.mercadoria']}" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #E5E5E5;">
+			<h3>
+				<h:outputText value="#{msg['label.mercadorias']}" />
+				<small> <h:outputText value="#{msg['label.listagem']}" /></small>
+			</h3>
+		</div>
+		<h:form>
+			<p:dataTable id="dataTable" var="mercadoria"
+				value="#{mercadoriaMB.mercadorias}" paginator="true" rows="5"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15">
+				<p:column>
+					<f:facet name="header">#</f:facet>
+					<h:outputText value="#{mercadoria.id}" />
+				</p:column>
+	
+				<p:column sortBy="#{mercadoria.nome}">
+					<f:facet name="header">
+						<h:outputText value="#{msg['label.mercadoria.nome']}" />
+					</f:facet>
+					<h:link outcome="editarMercadoria" value="#{mercadoria.nome}"
+						title="#{msg['label.editar']} #{mercadoria.nome}">
+						<f:param name="id" value="#{mercadoria.id}" />
+					</h:link>
+				</p:column>
+	
+				<p:column sortBy="#{mercadoria.descricao}">
+					<f:facet name="header">
+						<h:outputText value="#{msg['label.mercadoria.descricao']}" />
+					</f:facet>
+					<h:outputText value="#{mercadoria.descricao}" />
+				</p:column>
+	
+				<p:column sortBy="#{mercadoria.quantidade}">
+					<f:facet name="header">
+						<h:outputText value="#{msg['label.mercadoria.quantidade']}" />
+					</f:facet>
+					<h:outputText value="#{mercadoria.quantidade}" />
+				</p:column>
+	
+				<p:column sortBy="#{mercadoria.preco}">
+					<f:facet name="header">
+						<h:outputText value="#{msg['label.mercadoria.preco']}" />
+					</f:facet>
+					<h:outputText value="#{mercadoria.preco}">
+						<f:convertNumber type="currency"  />
+					</h:outputText>
+				</p:column>
+			</p:dataTable>
+		</h:form>
+		<h:messages />
+	</ui:define>
+</ui:composition>
+</html>

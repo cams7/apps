@@ -1,0 +1,31 @@
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+	<application>
+		<!-- configuracoes do locale (i18n) -->
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+		</locale-config>
+
+		<resource-bundle>
+			<base-name>messages_labels</base-name>
+			<var>msg</var>
+		</resource-bundle>
+	</application>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>listaMercadorias</from-outcome>
+			<to-view-id>/listaMercadorias.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- define uma lista para servir como MB para a tela sobre <managed-bean> 
+		<description>Sobre a aplicacao</description> <managed-bean-name>sobreMB</managed-bean-name> 
+		<managed-bean-class>java.util.ArrayList</managed-bean-class> <managed-bean-scope>request</managed-bean-scope> 
+		<list-entries> <value>sobre.title</value> <value>sobre.built</value> <value>sobre.site</value> 
+		<value>sobre.build</value> </list-entries> </managed-bean> -->
+</faces-config>

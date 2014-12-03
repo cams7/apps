@@ -1,0 +1,82 @@
+﻿insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1000, 'Entradas ou aquisições de serviços no Estado', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1100, 'Compras para industrialização, comercialização ou prestação de serviços', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1150, 'Transferências para industrialização, comercialização ou prestação de serviços', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1200, 'Devoluções de vendas de produção própria, de terceiros ou anulações de valores', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1250, 'Compras de energia elétrica', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1300, 'Aquisições de serviços de comunicação', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1350, 'Aquisições de serviços de transporte', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1400, 'Entradas de mercadorias sujeitas ao regime de substituição tributária', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1450, 'Sistemas de integração', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1500, 'Entradas de mercadorias remetidas com fim específico de exportação e eventuais devoluções', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1600, 'Créditos e ressarcimentos de ICMS', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1650, 'Entradas de combustíveis, derivados ou não de petróleo e lubrificantes', 1000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(1900, 'Outras entradas de mercadorias ou aquisições de serviços', 1000);
+
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2000, 'Entradas ou aquisições de serviços de outros Estados', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2100, 'Compras para industrialização, comercialização ou prestação de serviços', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2150, 'Transferências para industrialização, comercialização ou prestação de serviços', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2200, 'Devoluções de vendas de produção própria, de terceiros ou anulações de valores', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2250, 'Compras de energia elétrica', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2300, 'Aquisições de serviços de comunicação', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2350, 'Aquisições de serviços de transporte', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2400, 'Entradas de mercadorias sujeitas ao regime de substituição tributária', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2500, 'Entradas de mercadorias remetidas com fim específico de exportação e eventuais devoluções', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2600, 'Créditos e ressarcimentos de ICMS', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2650, 'Entradas de combustíveis, derivados ou não de petróleo e lubrificantes', 2000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(2900, 'Outras entradas de mercadorias ou aquisições de serviços', 2000);
+
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3000, 'Entradas ou aquisições de serviços do Exterior', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3100, 'Compras para industrialização, comercialização ou prestação de serviços', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3200, 'Devoluções de vendas de produção própria, de terceiros ou anulações de valores', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3250, 'Compras de energia elétrica', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3300, 'Aquisições de serviços de comunicação', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3350, 'Aquisições de serviços de transporte', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3500, 'Entradas de mercadorias remetidas com fim específico de exportação e eventuais devoluções', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3650, 'Entradas de combustíveis, derivados ou não de petróleo e lubrificantes', 3000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(3900, 'Outras entradas de mercadorias ou aquisições de serviços', 3000);
+
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5000, 'Saídas ou prestações de serviços para o Estado', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5100, 'Vendas de produção própria ou de terceiros', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5150, 'Transferências de produção própria ou de terceiros', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5200, 'Devoluções de compras para industrialização, comercialização ou anulações de valores', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5250, 'Vendas de energia elétrica', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5300, 'Prestações de serviços de comunicação', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5350, 'Prestações de serviços de transporte', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5400, 'Saídas de mercadorias sujeitas ao regime de substituição tributária', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5450, 'Sistemas de integração', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5500, 'Remessas com fim específico de exportação e eventuais devoluções', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5600, 'Créditos e ressarcimentos de ICMS', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5650, 'Saídas de combustíveis, derivados ou não de petróleo e lubrificantes', 5000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(5900, 'Outras saídas de mercadorias ou prestações de serviços', 5000);
+
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6000, 'Saídas ou prestações de serviços para outros Estados', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6100, 'Vendas de produção própria ou de terceiros', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6150, 'Transferências de produção própria ou de terceiros', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6200, 'Devoluções de compras para industrialização, comercialização ou anulações de valores', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6250, 'Vendas de energia elétrica', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6300, 'Prestações de serviços de comunicação', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6350, 'Prestações de serviços de transporte', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6400, 'Saídas de mercadorias sujeitas ao regime de substituição tributária', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6500, 'Remessas com fim específico de exportação e eventuais devoluções', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6600, 'Créditos e ressarcimentos de ICMS', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6650, 'Saídas de combustíveis, derivados ou não de petróleo e lubrificantes', 6000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(6900, 'Outras saídas de mercadorias ou prestações de serviços', 6000);
+
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7000, 'Saídas ou prestações de serviços para o Exterior', null);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7100, 'Vendas de produção própria ou de terceiros', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7200, 'Devoluções de compras para industrialização, comercialização ou anulações de valores', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7250, 'Vendas de energia elétrica', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7300, 'Prestações de serviços de comunicação', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7350, 'Prestações de serviços de transporte', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7500, 'Exportação de mercadorias recebidas com fim específico de exportação', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7550, 'Operações com bens de ativo imobilizado e materiais para uso ou consumo', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7650, 'Saídas de combustíveis, derivados ou não de petróleo e lubrificantes', 7000);
+insert into cfop(cod_cfop, descricao_cfop, cod_cfop_principal) values(7900, 'Outras entradas de mercadorias ou aquisições de serviços', 7000);
+
+select * from cfop;
+

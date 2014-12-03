@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/data/jpa
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<!-- Considera a estrutura de pacote para percorrer classes com as anotacoes 
+		de injecao de dependencia do Spring como: @Component, @Repository e @Service -->
+	<context:component-scan base-package="cams7.siscom.*.controller" />
+	<context:component-scan base-package="cams7.siscom.*.ui" />
+
+	<context:component-scan base-package="cams7.siscom.listener" />
+	<context:component-scan base-package="cams7.siscom.ui" />
+
+	<context:component-scan base-package="cams7.desk.component" />
+
+	<!-- Define as configuracoes JPA (veja o arquivo persistence.xml) -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="database" value="POSTGRESQL" />
+				<property name="generateDdl" value="true" />
+
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+		<property name="persistenceUnitName" value="appSwingSpringUnit" />
+	</bean>
+
+	<!-- Ativa o controle transacional -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<!-- Define a conexao com o banco de dados -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/siscom" />
+		<property name="username" value="siscom" />
+		<property name="password" value="siscom" />
+	</bean>
+
+	<!-- Ativa a criacao dos repositorios no Spring Data JPA -->
+	<jpa:repositories base-package="cams7.siscom.*.repository" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename">
+			<value>classpath:locale/messages</value>
+		</property>
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+</beans>

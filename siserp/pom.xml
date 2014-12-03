@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- Roda aplicação SISCOM -->
+<!--1º opção -->
+<!-- cd apps/SisCom-App -->
+<!-- mvn clean compile exec:java -Dexec.mainClass=cams7.siscom.Main -->
+
+<!-- 2º opção -->
+<!-- cd apps -->
+<!-- mvn clean package -->
+<!-- java -jar SisCom-App/target/siscom-app.jar -->
+
+<!-- 3º opção -->
+<!-- cd apps -->
+<!-- mvn clean package -->
+<!-- java -jar -Dlog4j.configuration=file:/home/cesar/desenv/git/github/apps/SisCom-App/src/main/resources/log4j.properties 
+	SisCom-App/target/siscom-app.jar -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>cams7.apps</groupId>
+		<artifactId>apps</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>cams7.apps.siserp</groupId>
+	<artifactId>siserp</artifactId>
+	
+	<name>Sistema ERP</name>
+	<description>Sistema integrado de gestão empresarial (enterprise resource planning - ERP)</description>
+
+	<packaging>pom</packaging>
+
+	<url>https://github.com/cams7/apps/tree/desenv/siserp</url>
+	
+	<properties>
+		<project.title>SisERP - Sistema integrado de gestão empresarial</project.title>
+		<site>https://github.com/cams7/apps/tree/desenv/siserp</site>
+	</properties>
+
+	<modules>	
+		<module>siscom-jpa</module>
+		<module>desk</module>
+		<module>jee</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>	
+			<dependency>
+				<groupId>cams7.apps.siserp</groupId>
+				<artifactId>siscom-jpa</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>		
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>		
+	</build>
+</project>

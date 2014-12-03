@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="pageTitle">
+		<h:outputText value="#{msg['page.title.editar.mercadoria']}" />
+	</ui:define>
+
+	<f:metadata>
+		<f:viewParam name="id" value="#{mercadoriaMB.idSelecionado}" />
+		<f:event type="preRenderView" listener="#{mercadoriaMB.editar}" />
+	</f:metadata>
+
+	<ui:define name="content">
+		<ui:include src="formMercadoria.xhtml">
+			<ui:param name="subtitle" value="#{msg['label.editar']}" />
+		</ui:include>
+	</ui:define>
+</ui:composition>
+</html>

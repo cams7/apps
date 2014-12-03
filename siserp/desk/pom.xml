@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!-- Roda aplicação SISCOM -->
+<!--1º opção -->
+<!-- cd apps/SisCom-App -->
+<!-- mvn clean compile exec:java -Dexec.mainClass=cams7.siscom.Main -->
+
+<!-- 2º opção -->
+<!-- cd apps -->
+<!-- mvn clean package -->
+<!-- java -jar SisCom-App/target/siscom-app.jar -->
+
+<!-- 3º opção -->
+<!-- cd apps -->
+<!-- mvn clean package -->
+<!-- java -jar -Dlog4j.configuration=file:/home/cesar/desenv/git/github/apps/SisCom-App/src/main/resources/log4j.properties 
+	SisCom-App/target/siscom-app.jar -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>cams7.apps.siserp</groupId>
+		<artifactId>siserp</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>desk</artifactId>
+	
+	<name>Sistema ERP - JSE</name>
+	<description>Sistema integrado de gestão empresarial (enterprise resource planning - ERP)</description>
+
+	<packaging>pom</packaging>
+
+	<url>https://github.com/cams7/apps/tree/desenv/siserp/desk</url>
+	
+	<properties>
+		<project.title>Sistema ERP - JSE</project.title>
+		<user.name>Cesar Magalhaes</user.name>
+		<site>https://github.com/cams7/apps/tree/desenv/siserp/desk</site>
+	</properties>
+
+	<modules>		
+		<module>siscom-app</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>			
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<!-- Make this jar executable -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<!-- DO NOT include log4j.properties file in your Jar -->
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>cams7.siscom.Main</mainClass>
+							<classpathPrefix>dependency-jars/</classpathPrefix>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<mode>development</mode>
+							<url>${project.url}</url>
+							<!--key>value</key -->
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- Copy project dependency -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeScope>runtime</includeScope>
+							<outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>			
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>m2e</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.eclipse.m2e</groupId>
+							<artifactId>lifecycle-mapping</artifactId>
+							<version>1.0.0</version>
+							<configuration>
+								<lifecycleMappingMetadata>
+									<pluginExecutions>
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.bsc.maven</groupId>
+												<artifactId>maven-processor-plugin</artifactId>
+												<versionRange>[2.0.6,)</versionRange>
+												<goals>
+													<goal>process</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+									</pluginExecutions>
+								</lifecycleMappingMetadata>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+</project>
