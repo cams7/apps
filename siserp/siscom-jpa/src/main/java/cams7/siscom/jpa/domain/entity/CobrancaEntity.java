@@ -29,7 +29,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name = "cobranca")
 @NamedQuery(name = "Cobranca.findAll", query = "SELECT c FROM CobrancaEntity c")
-public class CobrancaEntity extends cams7.jpa.domain.BaseEntity<Long> {
+public class CobrancaEntity extends cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

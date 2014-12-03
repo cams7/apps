@@ -5,7 +5,7 @@ package cams7.siscom.tipoPgto.ui;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.ui.ListView;
+import cams7.apps.desk.ui.ListView;
 
 /**
  * @author cesar

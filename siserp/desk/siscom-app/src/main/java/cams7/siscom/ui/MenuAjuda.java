@@ -20,7 +20,7 @@ public class MenuAjuda extends JMenu {
 	 * @param action
 	 *            vinculada com a tecla F1.
 	 */
-	public void addListener(final cams7.desk.action.AbstractAction action) {
+	public void addListener(final cams7.apps.desk.action.AbstractAction action) {
 		super.getActionMap().put("click", new javax.swing.AbstractAction() {
 
 			private static final long serialVersionUID = 1L;

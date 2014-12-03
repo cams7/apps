@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.jpa.domain.BaseEntity;
 
 @MappedSuperclass
 public abstract class Cabecario<PK extends Serializable> extends BaseEntity<PK> {

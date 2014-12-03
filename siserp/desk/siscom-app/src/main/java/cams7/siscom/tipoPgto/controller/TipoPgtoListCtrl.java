@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
-import cams7.desk.controller.BaseListCtrl;
+import cams7.apps.desk.controller.BaseListCtrl;
 import cams7.siscom.jpa.domain.entity.TipoPgtoEntity;
 import cams7.siscom.listener.MenuListener;
 import cams7.siscom.tipoPgto.repository.TipoPgtoRepository;

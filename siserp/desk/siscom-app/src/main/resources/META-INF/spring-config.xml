@@ -18,7 +18,7 @@
 	<context:component-scan base-package="cams7.siscom.listener" />
 	<context:component-scan base-package="cams7.siscom.ui" />
 
-	<context:component-scan base-package="cams7.desk.component" />
+	<context:component-scan base-package="cams7.apps.desk.component" />
 
 	<!-- Define as configuracoes JPA (veja o arquivo persistence.xml) -->
 	<bean id="entityManagerFactory"

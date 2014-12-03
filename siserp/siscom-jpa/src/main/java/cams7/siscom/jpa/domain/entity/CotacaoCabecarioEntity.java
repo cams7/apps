@@ -28,7 +28,7 @@ import cams7.siscom.jpa.domain.ItemCotacaoCabecario;
 @Entity
 @Table(name = "cot_cab")
 @NamedQuery(name = "CotacaoCabecario.findAll", query = "SELECT c FROM CotacaoCabecarioEntity c")
-public class CotacaoCabecarioEntity extends cams7.jpa.domain.BaseEntity<Long> {
+public class CotacaoCabecarioEntity extends cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -11,8 +11,8 @@ import javax.swing.JTextField;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.ui.EditView;
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.desk.ui.EditView;
+import cams7.apps.jpa.domain.BaseEntity;
 import cams7.siscom.jpa.domain.entity.CartaoCreditoEntity;
 
 /**

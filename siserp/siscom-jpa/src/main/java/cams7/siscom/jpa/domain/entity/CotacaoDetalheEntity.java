@@ -28,7 +28,7 @@ import cams7.siscom.jpa.domain.pk.CotacaoDetalhePK;
 @Table(name = "cot_det")
 @NamedQuery(name = "CotacaoDetalhe.findAll", query = "SELECT c FROM CotacaoDetalheEntity c")
 public class CotacaoDetalheEntity extends
-		cams7.jpa.domain.BaseEntity<CotacaoDetalhePK> {
+		cams7.apps.jpa.domain.BaseEntity<CotacaoDetalhePK> {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId

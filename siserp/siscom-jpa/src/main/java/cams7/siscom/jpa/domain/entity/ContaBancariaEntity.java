@@ -24,7 +24,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "conta_bancaria")
 @NamedQuery(name = "ContaBancaria.findAll", query = "SELECT c FROM ContaBancariaEntity c")
-public class ContaBancariaEntity extends cams7.jpa.domain.BaseEntity<Long> {
+public class ContaBancariaEntity extends cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -6,7 +6,7 @@ package cams7.siscom.tipoPgto.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import cams7.desk.controller.BaseEditCtrl;
+import cams7.apps.desk.controller.BaseEditCtrl;
 import cams7.siscom.jpa.domain.entity.TipoPgtoEntity;
 import cams7.siscom.tipoPgto.repository.TipoPgtoRepository;
 import cams7.siscom.tipoPgto.ui.TipoPgtoEditView;

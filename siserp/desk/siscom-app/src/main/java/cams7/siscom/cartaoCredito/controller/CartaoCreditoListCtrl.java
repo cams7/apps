@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
-import cams7.desk.controller.BaseListCtrl;
+import cams7.apps.desk.controller.BaseListCtrl;
 import cams7.siscom.cartaoCredito.repository.CartaoCreditoRepository;
 import cams7.siscom.cartaoCredito.ui.CartaoCreditoListView;
 import cams7.siscom.jpa.domain.entity.CartaoCreditoEntity;

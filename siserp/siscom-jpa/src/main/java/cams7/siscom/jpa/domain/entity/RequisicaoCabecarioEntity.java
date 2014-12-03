@@ -27,7 +27,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "req_cab")
 @NamedQuery(name = "RequisicaoCabecario.findAll", query = "SELECT r FROM RequisicaoCabecarioEntity r")
 public class RequisicaoCabecarioEntity extends
-		cams7.jpa.domain.BaseEntity<Long> {
+		cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

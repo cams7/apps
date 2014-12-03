@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name = "unidade")
 @NamedQuery(name = "UnidadeProduto.findAll", query = "SELECT u FROM UnidadeProdutoEntity u")
-public class UnidadeProdutoEntity extends cams7.jpa.domain.BaseEntity<Long> {
+public class UnidadeProdutoEntity extends cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -26,7 +26,7 @@ import cams7.siscom.jpa.domain.Endereco;
 @Entity
 @Table(name = "cliente_endereco")
 @NamedQuery(name = "ClienteEndereco.findAll", query = "SELECT e FROM ClienteEnderecoEntity e")
-public class ClienteEnderecoEntity extends cams7.jpa.domain.BaseEntity<Long> {
+public class ClienteEnderecoEntity extends cams7.apps.jpa.domain.BaseEntity<Long> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
-import cams7.desk.action.AbstractAction;
-import cams7.desk.listener.BaseListener;
+import cams7.apps.desk.action.AbstractAction;
+import cams7.apps.desk.listener.BaseListener;
 import cams7.siscom.cartaoCredito.controller.CartaoCreditoListCtrl;
 import cams7.siscom.contaBancaria.controller.ContaBancariaListCtrl;
 import cams7.siscom.tipoPgto.controller.TipoPgtoListCtrl;

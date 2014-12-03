@@ -19,7 +19,7 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.jpa.domain.BaseEntity;
 import cams7.siscom.jpa.domain.RegistroPessoal;
 
 /**

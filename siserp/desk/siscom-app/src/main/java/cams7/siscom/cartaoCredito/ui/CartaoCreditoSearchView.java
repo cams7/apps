@@ -2,7 +2,7 @@ package cams7.siscom.cartaoCredito.ui;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.ui.SearchView;
+import cams7.apps.desk.ui.SearchView;
 
 /**
  * Tela utilizada para realizar a pesquisa de <code>CartaoCredito</code> com

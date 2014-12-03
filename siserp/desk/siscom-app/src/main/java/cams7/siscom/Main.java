@@ -4,7 +4,7 @@ import java.util.Locale;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import cams7.util.ApplicationUtil;
+import cams7.apps.util.ApplicationUtil;
 
 /**
  * Ponto de entrada da aplicação.

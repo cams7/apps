@@ -1,10 +1,10 @@
 package cams7.siscom.ui;
 
-import static cams7.util.ApplicationProperties.getBuild;
-import static cams7.util.ApplicationProperties.getDesenvolvidoPor;
-import static cams7.util.ApplicationProperties.getURL;
-import static cams7.util.ApplicationProperties.getTitulo;
-import static cams7.util.ApplicationProperties.getVersao;
+import static cams7.apps.util.ApplicationProperties.getBuild;
+import static cams7.apps.util.ApplicationProperties.getDesenvolvidoPor;
+import static cams7.apps.util.ApplicationProperties.getTitulo;
+import static cams7.apps.util.ApplicationProperties.getURL;
+import static cams7.apps.util.ApplicationProperties.getVersao;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -23,8 +23,8 @@ import javax.swing.LayoutStyle;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.util.AppResourceBundleMessage;
-import cams7.util.ApplicationUtil;
+import cams7.apps.desk.util.AppResourceBundleMessage;
+import cams7.apps.util.ApplicationUtil;
 
 /**
  * Tela <i>Sobre</i>. Apresenta detalhes da aplicação.
@@ -36,7 +36,7 @@ import cams7.util.ApplicationUtil;
  * Injeção de Dependência <i>(DI)</i>.
  * </p>
  * 
- * @see cams7.util.ApplicationProperties
+ * @see cams7.apps.util.ApplicationProperties
  * 
  * @author YaW Tecnologia
  */

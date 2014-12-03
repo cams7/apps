@@ -8,7 +8,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.jpa.domain.BaseEntity;
 import cams7.siscom.jpa.domain.Cheque;
 
 /**

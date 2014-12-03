@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Size;
 
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.jpa.domain.BaseEntity;
 
 @MappedSuperclass
 public abstract class FechamentoCheque<PK extends Serializable> extends

@@ -3,7 +3,7 @@ package cams7.siscom.cartaoCredito.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import cams7.desk.controller.BaseSearchCtrl;
+import cams7.apps.desk.controller.BaseSearchCtrl;
 import cams7.siscom.cartaoCredito.repository.CartaoCreditoRepository;
 import cams7.siscom.cartaoCredito.ui.CartaoCreditoSearchView;
 import cams7.siscom.jpa.domain.entity.CartaoCreditoEntity;

@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name = "cfop")
 @NamedQuery(name = "Cfop.findAll", query = "SELECT c FROM CfopEntity c")
-public class CfopEntity extends cams7.jpa.domain.BaseEntity<Short> {
+public class CfopEntity extends cams7.apps.jpa.domain.BaseEntity<Short> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

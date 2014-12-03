@@ -27,8 +27,8 @@ import javax.swing.WindowConstants;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.util.AppResourceBundleMessage;
-import cams7.util.ApplicationUtil;
+import cams7.apps.desk.util.AppResourceBundleMessage;
+import cams7.apps.util.ApplicationUtil;
 
 /**
  * @author cesar

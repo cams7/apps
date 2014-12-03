@@ -28,7 +28,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name = "cartao_credito", uniqueConstraints = @UniqueConstraint(columnNames = { "empresa" }))
 @NamedQuery(name = "CartaoCredito.findAll", query = "SELECT c FROM CartaoCreditoEntity c")
-public class CartaoCreditoEntity extends cams7.jpa.domain.BaseEntity<Short> {
+public class CartaoCreditoEntity extends cams7.apps.jpa.domain.BaseEntity<Short> {
 	private static final long serialVersionUID = 1L;
 
 	@Id

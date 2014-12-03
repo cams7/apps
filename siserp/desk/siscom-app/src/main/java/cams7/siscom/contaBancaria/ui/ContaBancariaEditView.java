@@ -5,7 +5,7 @@ package cams7.siscom.contaBancaria.ui;
 
 import org.springframework.stereotype.Component;
 
-import cams7.desk.ui.EditView;
+import cams7.apps.desk.ui.EditView;
 
 /**
  * @author cesar

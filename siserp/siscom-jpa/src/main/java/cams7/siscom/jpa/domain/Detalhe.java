@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.MappedSuperclass;
 
-import cams7.jpa.domain.BaseEntity;
+import cams7.apps.jpa.domain.BaseEntity;
 
 @MappedSuperclass
 public abstract class Detalhe<PK extends Serializable> extends BaseEntity<PK> {
