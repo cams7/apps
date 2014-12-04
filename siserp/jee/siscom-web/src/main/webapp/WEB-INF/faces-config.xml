@@ -18,7 +18,7 @@
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>listaMercadorias</from-outcome>
-			<to-view-id>/listaMercadorias.xhtml</to-view-id>
+			<to-view-id>/mercadoria/listaMercadorias.xhtml</to-view-id>
 			<redirect />
 		</navigation-case>
 	</navigation-rule>
