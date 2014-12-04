@@ -55,7 +55,7 @@ public final class ApplicationUtil {
 		return entityName;
 	}
 
-	private static BaseEntity<?> getNewEntity(Class<BaseEntity<?>> entityType)
+	public static BaseEntity<?> getNewEntity(Class<BaseEntity<?>> entityType)
 			throws ApplicationException {
 		try {
 			BaseEntity<?> entity = entityType.newInstance();

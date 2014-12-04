@@ -9,8 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import org.jboss.logging.Logger;
-
+import cams7.apps.jee.AbstractBase;
 import cams7.apps.jpa.domain.BaseEntity;
 import cams7.apps.util.ApplicationUtil;
 
@@ -21,21 +20,19 @@ import cams7.apps.util.ApplicationUtil;
  * @author YaW Tecnologia
  */
 public abstract class BaseRepositoryImpl<E extends BaseEntity<ID>, ID extends Serializable>
-		implements BaseRepository<E, ID> {
+		extends AbstractBase<E> implements BaseRepository<E, ID> {
 
-	private final byte ENTITY_ARGUMENT_NUMBER = 0;
 	/**
 	 * Classe da entidade, necessário para o método
 	 * <code>EntityManager.find</code>.
 	 */
 	private Class<E> entityType;
-	private Logger log;
 
 	@SuppressWarnings("unchecked")
 	public BaseRepositoryImpl() {
+		super();
 		entityType = (Class<E>) ApplicationUtil.getType(this,
-				ENTITY_ARGUMENT_NUMBER);
-		log = Logger.getLogger(this.getClass());
+				getEntityArgumentNumber());
 	}
 
 	public E save(E entity) {
@@ -103,10 +100,6 @@ public abstract class BaseRepositoryImpl<E extends BaseEntity<ID>, ID extends Se
 
 	public Class<E> getEntityType() {
 		return entityType;
-	}
-
-	public Logger getLog() {
-		return log;
 	}
 
 }
