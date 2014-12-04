@@ -16,8 +16,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import cams7.siscom.jpa.domain.entity.Member;
+import cams7.siscom.member.bean.MemberEdit;
 
-import com.mastertheboss.controller.MemberRegistration;
 import com.mastertheboss.util.Resources;
 
 @RunWith(Arquillian.class)
@@ -25,13 +25,13 @@ public class MemberRegistrationTest {
    @Deployment
    public static Archive<?> createTestArchive() {
       return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Member.class, MemberRegistration.class, Resources.class)
+            .addClasses(Member.class, MemberEdit.class, Resources.class)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
    }
 
    @Inject
-   MemberRegistration memberRegistration;
+   MemberEdit memberRegistration;
 
    @Inject
    Logger log;

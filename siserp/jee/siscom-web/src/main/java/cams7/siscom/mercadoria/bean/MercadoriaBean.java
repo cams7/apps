@@ -1,4 +1,4 @@
-package cams7.siscom.mercadoria.mb;
+package cams7.siscom.mercadoria.bean;
 
 import static javax.faces.context.FacesContext.getCurrentInstance;
 

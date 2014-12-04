@@ -1,4 +1,4 @@
-package cams7.siscom.mb;
+package cams7.siscom.bean;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
