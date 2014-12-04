@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cams7.apps.jpa.repository;
+package cams7.apps.jee.jpa.repository;
 
 import java.io.Serializable;
 
@@ -13,7 +13,13 @@ import cams7.apps.jpa.domain.BaseEntity;
  */
 public interface BaseRepository<E extends BaseEntity<ID>, ID extends Serializable> {
 
-	public long countAll();
+	public E save(E entity);
 
-	public long countBySearch(String searchText);
+	public E findOne(ID id);
+
+	public Iterable<E> findAll();
+
+	public long count();
+
+	public void delete(E entity);
 }

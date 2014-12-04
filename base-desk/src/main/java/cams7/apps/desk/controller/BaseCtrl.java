@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.springframework.context.MessageSource;
 
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.apps.desk.listener.BaseListener;
 import cams7.apps.desk.ui.BaseView;
 import cams7.apps.desk.util.AppResourceBundleMessage;
@@ -34,7 +34,7 @@ import cams7.apps.util.ApplicationUtil;
  * 
  * @author YaW Tecnologia
  */
-public abstract class BaseCtrl<V extends BaseView, D extends EntityRepository<E, ?>, E extends BaseEntity<?>>
+public abstract class BaseCtrl<V extends BaseView, D extends BaseRepository<E, ?>, E extends BaseEntity<?>>
 		extends BaseListener {
 
 	protected final String EMPTY = ApplicationUtil.EMPTY;

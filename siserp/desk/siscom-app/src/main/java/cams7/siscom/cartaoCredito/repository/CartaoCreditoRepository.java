@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.siscom.jpa.domain.entity.CartaoCreditoEntity;
 
 /**
@@ -27,7 +27,7 @@ import cams7.siscom.jpa.domain.entity.CartaoCreditoEntity;
  *
  */
 public interface CartaoCreditoRepository extends
-		EntityRepository<CartaoCreditoEntity, Short> {
+		BaseRepository<CartaoCreditoEntity, Short> {
 
 	/*
 	 * (non-Javadoc)

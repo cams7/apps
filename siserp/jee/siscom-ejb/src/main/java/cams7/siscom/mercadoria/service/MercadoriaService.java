@@ -1,9 +1,8 @@
-package br.com.yaw.cdi.service;
-
-import java.util.List;
+package cams7.siscom.mercadoria.service;
 
 import javax.ejb.Local;
 
+import cams7.apps.jee.service.BaseService;
 import cams7.siscom.jpa.domain.entity.Mercadoria;
 
 /**
@@ -16,14 +15,6 @@ import cams7.siscom.jpa.domain.entity.Mercadoria;
  * @author YaW Tecnologia
  */
 @Local
-public interface MercadoriaService {
-
-	public Mercadoria save(Mercadoria mercadoria);
-
-	public void remove(Mercadoria mercadoria);
-
-	public Mercadoria find(Long id);
-
-	public List<Mercadoria> findAll();
+public interface MercadoriaService extends BaseService<Mercadoria, Long> {
 
 }

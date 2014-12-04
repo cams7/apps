@@ -1,4 +1,4 @@
-package br.com.yaw.cdi.mb;
+package cams7.siscom.mb;
 
 import javax.inject.Named;
 import javax.inject.Singleton;

@@ -1,9 +1,8 @@
-package br.com.yaw.cdi.service;
+package cams7.siscom.mercadoria.service;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
+import cams7.apps.jee.service.BaseServiceImpl;
 import cams7.siscom.jpa.domain.entity.Mercadoria;
 
 /**
@@ -19,19 +18,11 @@ import cams7.siscom.jpa.domain.entity.Mercadoria;
  * @author YaW Tecnologia
  */
 @Stateless
-public class MercadoriaServiceEJB extends AbstractPersistence<Mercadoria, Long>
+public class MercadoriaServiceImpl extends BaseServiceImpl<Mercadoria, Long>
 		implements MercadoriaService {
 
-	@PersistenceContext(unitName = "appSwingSpringUnit")
-	private EntityManager em;
-
-	@Override
-	protected EntityManager getEntityManager() {
-		return em;
-	}
-
-	public MercadoriaServiceEJB() {
-		super(Mercadoria.class);
+	public MercadoriaServiceImpl() {
+		super();
 	}
 
 }

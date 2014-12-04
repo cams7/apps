@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.siscom.jpa.domain.entity.ContaBancariaEntity;
 
 /**
@@ -16,7 +16,7 @@ import cams7.siscom.jpa.domain.entity.ContaBancariaEntity;
  *
  */
 public interface ContaBancariaRepository extends
-		EntityRepository<ContaBancariaEntity, Long> {
+		BaseRepository<ContaBancariaEntity, Long> {
 
 	/*
 	 * (non-Javadoc)

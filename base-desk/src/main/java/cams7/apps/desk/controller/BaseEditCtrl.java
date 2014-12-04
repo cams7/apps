@@ -17,7 +17,7 @@ import cams7.apps.desk.action.ConditionalAction;
 import cams7.apps.desk.component.EntityValidator;
 import cams7.apps.desk.event.DeleteEvent;
 import cams7.apps.desk.event.EditEvent;
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.apps.desk.ui.EditView;
 import cams7.apps.jpa.domain.BaseEntity;
 
@@ -25,7 +25,7 @@ import cams7.apps.jpa.domain.BaseEntity;
  * @author cesar
  *
  */
-public abstract class BaseEditCtrl<V extends EditView, D extends EntityRepository<E, ?>, E extends BaseEntity<?>>
+public abstract class BaseEditCtrl<V extends EditView, D extends BaseRepository<E, ?>, E extends BaseEntity<?>>
 		extends BaseCtrl<V, D, E> {
 
 	@Autowired
@@ -140,7 +140,7 @@ public abstract class BaseEditCtrl<V extends EditView, D extends EntityRepositor
 
 				Serializable id = getView().getEntityId();
 				if (id != null) {
-					EntityRepository<BaseEntity<Serializable>, Serializable> repository = (EntityRepository<BaseEntity<Serializable>, Serializable>) getRepository();
+					BaseRepository<BaseEntity<Serializable>, Serializable> repository = (BaseRepository<BaseEntity<Serializable>, Serializable>) getRepository();
 					repository.delete(id);
 				}
 			}

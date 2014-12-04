@@ -26,7 +26,7 @@ import cams7.apps.desk.event.DeleteEvent;
 import cams7.apps.desk.event.EditEvent;
 import cams7.apps.desk.event.ListEvent;
 import cams7.apps.desk.event.SearchEvent;
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.apps.desk.listener.BaseListener;
 import cams7.apps.desk.ui.ListView;
 import cams7.apps.jpa.domain.BaseEntity;
@@ -37,7 +37,7 @@ import cams7.apps.util.ApplicationUtil;
  * @author cesar
  *
  */
-public abstract class BaseListCtrl<V extends ListView, D extends EntityRepository<E, ?>, E extends BaseEntity<?>>
+public abstract class BaseListCtrl<V extends ListView, D extends BaseRepository<E, ?>, E extends BaseEntity<?>>
 		extends BaseCtrl<V, D, E> {
 
 	@Autowired

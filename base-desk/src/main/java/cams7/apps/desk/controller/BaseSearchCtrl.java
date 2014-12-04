@@ -17,7 +17,7 @@ import org.springframework.data.domain.Sort.Direction;
 import cams7.apps.desk.action.AbstractAction;
 import cams7.apps.desk.component.Paginacao;
 import cams7.apps.desk.event.SearchEvent;
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.apps.desk.ui.SearchView;
 import cams7.apps.jpa.domain.BaseEntity;
 
@@ -25,7 +25,7 @@ import cams7.apps.jpa.domain.BaseEntity;
  * @author cesar
  *
  */
-public abstract class BaseSearchCtrl<V extends SearchView, D extends EntityRepository<E, ?>, E extends BaseEntity<?>>
+public abstract class BaseSearchCtrl<V extends SearchView, D extends BaseRepository<E, ?>, E extends BaseEntity<?>>
 		extends BaseCtrl<V, D, E> {
 
 	@Autowired(required = true)

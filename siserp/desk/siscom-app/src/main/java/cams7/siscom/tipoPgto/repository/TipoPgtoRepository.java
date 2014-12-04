@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cams7.apps.desk.jpa.repository.EntityRepository;
+import cams7.apps.desk.jpa.repository.BaseRepository;
 import cams7.siscom.jpa.domain.entity.TipoPgtoEntity;
 
 /**
@@ -16,7 +16,7 @@ import cams7.siscom.jpa.domain.entity.TipoPgtoEntity;
  *
  */
 public interface TipoPgtoRepository extends
-		EntityRepository<TipoPgtoEntity, Short> {
+		BaseRepository<TipoPgtoEntity, Short> {
 
 	/*
 	 * (non-Javadoc)
