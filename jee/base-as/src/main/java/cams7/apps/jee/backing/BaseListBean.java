@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cams7.apps.jee.bean;
+package cams7.apps.jee.backing;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import cams7.apps.jpa.domain.BaseEntity;
  * @author cesar
  *
  */
-public abstract class BaseListProducer<S extends BaseService<E, ?>, E extends BaseEntity<?>>
+public abstract class BaseListBean<S extends BaseService<E, ?>, E extends BaseEntity<?>>
 		extends AbstractBean<E> {
 
 	private final byte ENTITY_ARGUMENT_NUMBER = 1;
@@ -28,7 +28,7 @@ public abstract class BaseListProducer<S extends BaseService<E, ?>, E extends Ba
 
 	private List<E> entities;
 
-	public BaseListProducer() {
+	public BaseListBean() {
 		super();
 	}
 

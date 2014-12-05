@@ -1,31 +1,26 @@
-package cams7.siscom.member.bean;
-
-import java.io.Serializable;
+package cams7.siscom.member.backing;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 
-import cams7.apps.jee.bean.BaseEdit;
+import cams7.apps.jee.backing.BaseEditBean;
 import cams7.siscom.jpa.domain.entity.Member;
 import cams7.siscom.member.service.MemberService;
 
 @Named("memberRegistration")
 // @ManagedBean(name = "memberRegistration")
 @RequestScoped
-public class MemberEdit extends BaseEdit<MemberService, Member> implements
-		Serializable {
+public class MemberEditBean extends BaseEditBean<MemberService, Member> {
 
-	private static final long serialVersionUID = 1L;
-
-	public MemberEdit() {
+	public MemberEditBean() {
 		super();
 	}
 
-	// @Named("newMember")
-	// @Produces
-	// // @NewEntity
-	// @Override
-	public Member getMember() {
+	@Named("newMember")
+	@Produces
+	@Override
+	public Member getEntity() {
 		return super.getEntity();
 	}
 

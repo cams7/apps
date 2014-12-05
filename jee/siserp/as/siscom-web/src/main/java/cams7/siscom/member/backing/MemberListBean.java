@@ -1,4 +1,4 @@
-package cams7.siscom.member.bean;
+package cams7.siscom.member.backing;
 
 import java.util.List;
 
@@ -6,14 +6,14 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 
-import cams7.apps.jee.bean.BaseListProducer;
+import cams7.apps.jee.backing.BaseListBean;
 import cams7.siscom.jpa.domain.entity.Member;
 import cams7.siscom.member.service.MemberService;
 
 @RequestScoped
-public class MemberListProducer extends BaseListProducer<MemberService, Member> {
+public class MemberListBean extends BaseListBean<MemberService, Member> {
 
-	public MemberListProducer() {
+	public MemberListBean() {
 		super();
 	}
 

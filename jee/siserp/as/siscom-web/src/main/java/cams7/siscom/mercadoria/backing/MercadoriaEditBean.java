@@ -1,4 +1,4 @@
-package cams7.siscom.mercadoria.bean;
+package cams7.siscom.mercadoria.backing;
 
 import static javax.faces.context.FacesContext.getCurrentInstance;
 
@@ -34,7 +34,7 @@ import cams7.siscom.mercadoria.service.MercadoriaService;
  */
 @Named("mercadoriaMB")
 @RequestScoped
-public class MercadoriaEdit {
+public class MercadoriaEditBean {
 
 	/**
 	 * Referência para o componente EJB, injetado pelo container.
@@ -55,7 +55,7 @@ public class MercadoriaEdit {
 
 	// private List<Mercadoria> mercadorias;
 
-	public MercadoriaEdit() {
+	public MercadoriaEditBean() {
 	}
 
 	public void setIdSelecionado(Long idSelecionado) {

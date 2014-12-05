@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cams7.siscom.mercadoria.bean;
+package cams7.siscom.mercadoria.backing;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 
-import cams7.apps.jee.bean.BaseListProducer;
+import cams7.apps.jee.backing.BaseListBean;
 import cams7.siscom.jpa.domain.entity.Mercadoria;
 import cams7.siscom.mercadoria.service.MercadoriaService;
 
@@ -18,13 +18,13 @@ import cams7.siscom.mercadoria.service.MercadoriaService;
  *
  */
 @RequestScoped
-public class MercadoriaListProducer extends
-		BaseListProducer<MercadoriaService, Mercadoria> {
+public class MercadoriaListBean extends
+		BaseListBean<MercadoriaService, Mercadoria> {
 
 	/**
 	 * 
 	 */
-	public MercadoriaListProducer() {
+	public MercadoriaListBean() {
 		super();
 	}
 

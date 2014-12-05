@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cams7.apps.jee.bean;
+package cams7.apps.jee.backing;
 
 import cams7.apps.jee.AbstractBase;
 import cams7.apps.jpa.domain.BaseEntity;
