@@ -3,9 +3,14 @@
  */
 package cams7.apps.jee.bean;
 
+import java.util.ResourceBundle;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.event.Event;
+import javax.faces.application.FacesMessage;
+import javax.faces.application.FacesMessage.Severity;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import cams7.apps.jee.service.BaseService;
@@ -27,10 +32,16 @@ public abstract class BaseEdit<S extends BaseService<E, ?>, E extends BaseEntity
 	@Inject
 	private Event<E> entityEventSrc;
 
-	private E newEntity;
+	// @Inject
+	// @NewEntity
+	private E entity;
 
-	public E getNewEntity() {
-		return newEntity;
+	// @Inject
+	// @InjectFacesContext
+	// private FacesContext facesContext;
+
+	public E getEntity() {
+		return entity;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -39,22 +50,28 @@ public abstract class BaseEdit<S extends BaseService<E, ?>, E extends BaseEntity
 		Class<E> entityType = getService().getEntityType();
 
 		try {
-			newEntity = (E) ApplicationUtil
+			entity = (E) ApplicationUtil
 					.getNewEntity((Class<BaseEntity<?>>) entityType);
 		} catch (ApplicationException e) {
 			getLog().error(e.getMessage());
 		}
 	}
 
-	public String register() throws Exception {
-		newEntity = getService().save(newEntity);
+	public String salva() {
+		try {
+			entity = getService().save(entity);
 
-		getLog().info("Registering " + newEntity.getId());
+			getLog().info("New entity: id=" + entity.getId());
 
-		getEntityEventSrc().fire(newEntity);
+			getEntityEventSrc().fire(entity);
 
-		initNewEntity();
-		return null;
+			initNewEntity();
+		} catch (Exception ex) {
+			// addErrorMessage("msg.erro.salvar.mercadoria", ex.getMessage());
+			getLog().error("Erro ao salvar mercadoria.", ex);
+			return "error";
+		}
+		return "ok";
 	}
 
 	protected S getService() {
@@ -64,5 +81,42 @@ public abstract class BaseEdit<S extends BaseService<E, ?>, E extends BaseEntity
 	protected Event<E> getEntityEventSrc() {
 		return entityEventSrc;
 	}
+
+//	private String getMessageFromI18N(String key) {
+//		ResourceBundle bundle = ResourceBundle.getBundle("messages_labels",
+//				FacesContext.getCurrentInstance().getViewRoot().getLocale());
+//		return bundle.getString(key);
+//	}
+//
+//	protected void addMessage(String id, Severity severity, String key,
+//			String message) {
+//		FacesMessage facesMessage = new FacesMessage(severity,
+//				getMessageFromI18N(key), message);
+//		FacesContext.getCurrentInstance().addMessage(id, facesMessage);
+//	}
+//
+//	protected void addErrorMessage(String id, String key, String message) {
+//		addMessage(id, FacesMessage.SEVERITY_ERROR, key, message);
+//	}
+//
+//	protected void addErrorMessage(String key, String message) {
+//		addErrorMessage(null, key, message);
+//	}
+//
+//	protected void addInfoMessage(String id, String key, String message) {
+//		addMessage(id, FacesMessage.SEVERITY_INFO, key, message);
+//	}
+//
+//	protected void addInfoMessage(String key, String message) {
+//		addInfoMessage(null, key, message);
+//	}
+//
+//	protected void addWarnMessage(String id, String key, String message) {
+//		addMessage(id, FacesMessage.SEVERITY_WARN, key, message);
+//	}
+//
+//	protected void addWarnMessage(String key, String message) {
+//		addWarnMessage(null, key, message);
+//	}
 
 }

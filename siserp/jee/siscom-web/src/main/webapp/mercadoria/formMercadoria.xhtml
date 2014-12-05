@@ -4,7 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 
-	<h:form styleClass="form-horizontal">
+	<h:form id="mercadoria" styleClass="form-horizontal">
 		<fieldset>
 			<legend>
 				<h3>
@@ -62,11 +62,12 @@
 				</div>
 			</div>
 		</fieldset>
+		
 
 		<div class="control-group">
 			<div class="controls">
 				<p:commandButton value="#{msg['button.salvar']}"
-					action="#{mercadoriaMB.salvar}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
+					action="#{mercadoriaMB.salva}" styleClass="btn btn-success" onclick="dlg.show();" oncomplete="dlg.hide();"
 					rendered="#{mercadoriaMB.mercadoria != null}" />
 				<p:button value="#{msg['button.cancelar']}"
 					outcome="listaMercadorias" styleClass="btn" />
@@ -84,7 +85,7 @@
 		<p:confirmDialog id="confirmDialog" message="#{msg['excluir.mercadoria.confirma']}"
 			header="#{msg['excluir.mercadoria']}" severity="alert" widgetVar="confirmation">  
 	        <p:commandButton id="confirm" value="#{msg['confirma.sim']}" update="messages" 
-	        	oncomplete="confirmation.hide()" action="#{mercadoriaMB.remover}" />  
+	        	oncomplete="confirmation.hide()" action="#{mercadoriaMB.remove}" />  
 	        <p:commandButton id="decline" value="#{msg['confirma.nao']}" 
 	        	onclick="confirmation.hide()" type="button" />
 	    </p:confirmDialog>

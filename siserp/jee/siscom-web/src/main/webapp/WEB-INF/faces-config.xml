@@ -16,12 +16,50 @@
 	</application>
 
 	<navigation-rule>
+		<from-view-id>/mercadoria/editarMercadoria.xhtml</from-view-id>
 		<navigation-case>
-			<from-outcome>listaMercadorias</from-outcome>
+			<!-- from-action>#{mercadoriaMB.salva}</from-action -->
+			<from-outcome>ok</from-outcome>
 			<to-view-id>/mercadoria/listaMercadorias.xhtml</to-view-id>
 			<redirect />
 		</navigation-case>
+		<navigation-case>
+			<!-- from-action>#{mercadoriaMB.salva}</from-action -->
+			<from-outcome>error</from-outcome>
+			<to-view-id>/mercadoria/editarMercadoria.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/mercadoria/incluirMercadoria.xhtml</from-view-id>
+		<navigation-case>
+			<!-- from-action>#{mercadoriaMB.salva}</from-action -->
+			<from-outcome>ok</from-outcome>
+			<to-view-id>/mercadoria/listaMercadorias.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<!-- from-action>#{mercadoriaMB.salva}</from-action -->
+			<from-outcome>error</from-outcome>
+			<to-view-id>/mercadoria/incluirMercadoria.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{memberRegistration.salva}</from-action>
+			<from-outcome>ok</from-outcome>
+			<to-view-id>index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{memberRegistration.salva}</from-action>
+			<from-outcome>error</from-outcome>
+			<to-view-id>index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
 
 	<!-- define uma lista para servir como MB para a tela sobre <managed-bean> 
 		<description>Sobre a aplicacao</description> <managed-bean-name>sobreMB</managed-bean-name> 

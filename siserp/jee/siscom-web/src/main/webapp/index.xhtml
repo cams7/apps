@@ -18,28 +18,28 @@
             <tr>
                <th style="text-align: right;"><h:outputLabel
                      for="name" value="Name:" /></th>
-               <td><h:inputText id="name" value="#{newMember.name}" />
+               <td><h:inputText id="name" value="#{memberRegistration.member.name}" />
                   <h:message for="name" errorClass="invalid" /></td>
             </tr>
             <tr>
                <th style="text-align: right;"><h:outputLabel
                      for="email" value="Email:" /></th>
                <td><h:inputText id="email"
-                     value="#{newMember.email}" /> <h:message
+                     value="#{memberRegistration.member.email}" /> <h:message
                      for="email" errorClass="invalid" /></td>
             </tr>
             <tr>
                <th style="text-align: right;"><h:outputLabel
                      for="phoneNumber" value="Phone #:" /></th>
                <td><h:inputText id="phoneNumber"
-                     value="#{newMember.phoneNumber}" /> <h:message
+                     value="#{memberRegistration.member.phoneNumber}" /> <h:message
                      for="phoneNumber" errorClass="invalid" /></td>
             </tr>
          </table>
          
          <p>
             <h:commandButton id="register"
-               action="#{memberRegistration.register}" value="Register" />
+               action="#{memberRegistration.salva}" value="Register" />
             <h:outputText value=" Registered!"
                rendered="#{facesContext.postback and empty facesContext.messageList}"
                style="color: green;" />

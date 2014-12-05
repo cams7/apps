@@ -2,10 +2,10 @@ package cams7.siscom.mercadoria.bean;
 
 import static javax.faces.context.FacesContext.getCurrentInstance;
 
-import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.event.Event;
 import javax.faces.application.FacesMessage;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -34,7 +34,7 @@ import cams7.siscom.mercadoria.service.MercadoriaService;
  */
 @Named("mercadoriaMB")
 @RequestScoped
-public class MercadoriaBean {
+public class MercadoriaEdit {
 
 	/**
 	 * Referência para o componente EJB, injetado pelo container.
@@ -48,11 +48,14 @@ public class MercadoriaBean {
 	@Inject
 	private Mercadoria mercadoria;
 
+	@Inject
+	private Event<Mercadoria> mercadoriaEventSrc;
+
 	private Long idSelecionado;
 
-	private List<Mercadoria> mercadorias;
+	// private List<Mercadoria> mercadorias;
 
-	public MercadoriaBean() {
+	public MercadoriaEdit() {
 	}
 
 	public void setIdSelecionado(Long idSelecionado) {
@@ -75,39 +78,41 @@ public class MercadoriaBean {
 		// log.debug("Pronto pra editar");
 	}
 
-	public List<Mercadoria> getMercadorias() {
-		System.out.println("service: " + service);
-		if (mercadorias == null) {
-			mercadorias = (List<Mercadoria>) service.findAll();
-		}
-		return mercadorias;
-	}
+	// public List<Mercadoria> getMercadorias() {
+	// System.out.println("service: " + service);
+	// if (mercadorias == null) {
+	// mercadorias = (List<Mercadoria>) service.findAll();
+	// }
+	// return mercadorias;
+	// }
 
-	public String salvar() {
+	public String salva() {
 		try {
 			System.out.println("service: " + service);
-			service.save(mercadoria);
+			mercadoria = service.save(mercadoria);
+			mercadoriaEventSrc.fire(mercadoria);
 		} catch (Exception ex) {
 			// log.error("Erro ao salvar mercadoria.", ex);
 			addMessage(getMessageFromI18N("msg.erro.salvar.mercadoria"),
 					ex.getMessage());
-			return "";
+			return "error";
 		}
 		// log.debug("Salvour mercadoria "+mercadoria.getId());
-		return "listaMercadorias";
+		return "ok";
 	}
 
-	public String remover() {
+	public String remove() {
 		try {
 			service.delete(mercadoria);
+			mercadoriaEventSrc.fire(mercadoria);
 		} catch (Exception ex) {
 			// log.error("Erro ao remover mercadoria.", ex);
 			addMessage(getMessageFromI18N("msg.erro.remover.mercadoria"),
 					ex.getMessage());
-			return "";
+			return "error";
 		}
 		// log.debug("Removeu mercadoria "+mercadoria.getId());
-		return "listaMercadorias";
+		return "ok";
 	}
 
 	/**

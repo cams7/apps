@@ -23,4 +23,5 @@ public class MemberListProducer extends BaseListProducer<MemberService, Member> 
 	public List<Member> getEntities() {
 		return super.getEntities();
 	}
+
 }
