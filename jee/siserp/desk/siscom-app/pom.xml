@@ -17,7 +17,7 @@
 
 	<properties>
 		<project.title>SisCom - Sistema Comercial</project.title>
-		<site>https://github.com/cams7/apps/tree/desenv/siserp/desk/siscom-app</site>
+		<site>https://github.com/cams7/apps/tree/desenv/jee/siserp/desk/siscom-app</site>
 	</properties>
 
 	<dependencies>

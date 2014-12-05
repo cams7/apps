@@ -9,20 +9,20 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>jee</artifactId>
+	<artifactId>as</artifactId>
 
-	<name>Sistema ERP - JEE</name>
+	<name>Sistema ERP - JBOSS-AS</name>
 	<description>Sistema integrado de gestão empresarial (enterprise resource planning - ERP)</description>
 
 	<packaging>pom</packaging>
 
-	<url>https://github.com/cams7/apps/tree/desenv/siserp/jee</url>
+	<url>https://github.com/cams7/apps/tree/desenv/jee/siserp/as</url>
 
 	<properties>
 		<jboss.home>/home/cesar/desenv/java/jboss/jboss-eap-6.3</jboss.home>
 
-		<project.title>Sistema ERP - JEE</project.title>
-		<site>https://github.com/cams7/apps/tree/desenv/siserp/jee</site>
+		<project.title>Sistema ERP - JBOSS-AS</project.title>
+		<site>https://github.com/cams7/apps/tree/desenv/jee/siserp/as</site>
 	</properties>
 
 	<dependencyManagement>

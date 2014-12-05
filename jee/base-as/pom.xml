@@ -5,19 +5,19 @@
 
 	<parent>
 		<groupId>cams7.apps</groupId>
-		<artifactId>apps</artifactId>
+		<artifactId>jee</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>base-desk</artifactId>
-	<name>Modulo base de todas as aplicacoes JSE</name>
-	<description>Modulo base usado por todas as aplicacoes JSE</description>
+	<artifactId>base-as</artifactId>
+	<name>Modulo base de todas as aplicacoes JBOSS-AS</name>
+	<description>Modulo base usado por todas as aplicacoes JBOSS-AS</description>
 
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.title>Modulo base JSE</project.title>
-		<site>https://github.com/cams7/apps/tree/desenv/base-desk</site>
+		<project.title>Modulo base JBOSS-AS</project.title>
+		<site>https://github.com/cams7/apps/tree/desenv/jee/base-as</site>
 	</properties>
 
 	<dependencies>
@@ -44,30 +44,18 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
+			<groupId>org.jboss.spec.javax.faces</groupId>
+			<artifactId>jboss-jsf-api_2.0_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

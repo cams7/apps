@@ -31,12 +31,12 @@
 
 	<packaging>pom</packaging>
 
-	<url>https://github.com/cams7/apps/tree/desenv/siserp/desk</url>
+	<url>https://github.com/cams7/apps/tree/desenv/jee/siserp/desk</url>
 	
 	<properties>
 		<project.title>Sistema ERP - JSE</project.title>
 		<user.name>Cesar Magalhaes</user.name>
-		<site>https://github.com/cams7/apps/tree/desenv/siserp/desk</site>
+		<site>https://github.com/cams7/apps/tree/desenv/jee/siserp/desk</site>
 	</properties>
 
 	<modules>		

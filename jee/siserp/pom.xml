@@ -20,7 +20,7 @@
 	
 	<parent>
 		<groupId>cams7.apps</groupId>
-		<artifactId>apps</artifactId>
+		<artifactId>jee</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
@@ -32,17 +32,17 @@
 
 	<packaging>pom</packaging>
 
-	<url>https://github.com/cams7/apps/tree/desenv/siserp</url>
+	<url>https://github.com/cams7/apps/tree/desenv/jee/siserp</url>
 	
 	<properties>
 		<project.title>SisERP - Sistema integrado de gestão empresarial</project.title>
-		<site>https://github.com/cams7/apps/tree/desenv/siserp</site>
+		<site>https://github.com/cams7/apps/tree/desenv/jee/siserp</site>
 	</properties>
 
 	<modules>	
 		<module>siscom-jpa</module>
 		<module>desk</module>
-		<module>jee</module>
+		<module>as</module>
 	</modules>
 
 	<dependencyManagement>
