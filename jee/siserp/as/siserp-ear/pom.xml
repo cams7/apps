@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>cams7.apps.siserp</groupId>
+		<groupId>br.com.cams7.apps.siserp</groupId>
 		<artifactId>as</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
@@ -22,27 +22,27 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>cams7.apps</groupId>
+			<groupId>br.com.cams7.apps</groupId>
 			<artifactId>base-app</artifactId>
 			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>cams7.apps.siserp</groupId>
+			<groupId>br.com.cams7.apps.siserp</groupId>
 			<artifactId>siscom-jpa</artifactId>
 			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>cams7.apps</groupId>
+			<groupId>br.com.cams7.apps</groupId>
 			<artifactId>base-as</artifactId>
 			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>cams7.apps.siserp</groupId>
+			<groupId>br.com.cams7.apps.siserp</groupId>
 			<artifactId>siscom-ejb</artifactId>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>cams7.apps.siserp</groupId>
+			<groupId>br.com.cams7.apps.siserp</groupId>
 			<artifactId>siscom-web</artifactId>
 			<type>war</type>
 		</dependency>
@@ -57,23 +57,23 @@
 				<artifactId>maven-ear-plugin</artifactId>
 
 				<configuration>
-					<!--version>6</version-->
+					<!--version>6</version -->
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
 
-					<modules>						
+					<modules>
 						<jarModule>
-							<groupId>cams7.apps.siserp</groupId>
+							<groupId>br.com.cams7.apps.siserp</groupId>
 							<artifactId>siscom-jpa</artifactId>
 							<bundleDir>/</bundleDir>
 							<includeInApplicationXml>true</includeInApplicationXml>
 						</jarModule>
 						<webModule>
-							<groupId>cams7.apps.siserp</groupId>
+							<groupId>br.com.cams7.apps.siserp</groupId>
 							<artifactId>siscom-web</artifactId>
 							<contextRoot>/siscom</contextRoot>
 						</webModule>
 						<ejbModule>
-							<groupId>cams7.apps.siserp</groupId>
+							<groupId>br.com.cams7.apps.siserp</groupId>
 							<artifactId>siscom-ejb</artifactId>
 						</ejbModule>
 					</modules>
@@ -85,7 +85,7 @@
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<configuration>
 					<filename>siserp.ear</filename>
-					<skip>true</skip>
+					<skip>false</skip>
 				</configuration>
 			</plugin>
 		</plugins>
