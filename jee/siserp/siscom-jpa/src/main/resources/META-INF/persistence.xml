@@ -10,43 +10,43 @@
 		
 		<non-jta-data-source>java:jboss/datasources/SisComDS</non-jta-data-source>
 
-		<class>cams7.siscom.jpa.domain.entity.BancoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.CartaoCreditoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.CfopEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ChequeNaoCompesadoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ClienteEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ClienteEnderecoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ClienteTelefoneEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.CobrancaEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ConciliacaoBancariaEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ContaBancariaEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.CotacaoCabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.CotacaoDetalheEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.DepartamentoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.FechamentoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.FornecedorEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.FuncionarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.MovimentoBancarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.NFECabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.NFEDetalheEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.OrcamentoCabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.OrcamentoDetalheEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.PagamentoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.PedidoCabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.PedidoDetalheEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.PlanoContaEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.ProdutoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.RecebimentoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.RequisicaoCabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.RequisicaoDetalheEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.TipoPgtoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.UnidadeProdutoEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.VendaCabecarioEntity</class>
-		<class>cams7.siscom.jpa.domain.entity.VendaDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.BancoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.CartaoCreditoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.CfopEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ChequeNaoCompesadoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ClienteEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ClienteEnderecoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ClienteTelefoneEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.CobrancaEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ConciliacaoBancariaEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ContaBancariaEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.CotacaoCabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.CotacaoDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.DepartamentoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.FechamentoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.FornecedorEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.FuncionarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.MovimentoBancarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.NFECabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.NFEDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.OrcamentoCabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.OrcamentoDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.PagamentoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.PedidoCabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.PedidoDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.PlanoContaEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.ProdutoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.RecebimentoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.RequisicaoCabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.RequisicaoDetalheEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.TipoPgtoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.UnidadeProdutoEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.VendaCabecarioEntity</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.VendaDetalheEntity</class>
 		
 		<!-- TODO: Essas classe serao removida -->
-		<class>cams7.siscom.jpa.domain.entity.Mercadoria</class>
-		<class>cams7.siscom.jpa.domain.entity.Member</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.Mercadoria</class>
+		<class>br.com.cams7.siscom.jpa.domain.entity.Member</class>
 
 
 		<properties>

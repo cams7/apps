@@ -12,13 +12,13 @@
 
 	<!-- Considera a estrutura de pacote para percorrer classes com as anotacoes 
 		de injecao de dependencia do Spring como: @Component, @Repository e @Service -->
-	<context:component-scan base-package="cams7.siscom.*.controller" />
-	<context:component-scan base-package="cams7.siscom.*.ui" />
+	<context:component-scan base-package="br.com.cams7.siscom.*.controller" />
+	<context:component-scan base-package="br.com.cams7.siscom.*.ui" />
 
-	<context:component-scan base-package="cams7.siscom.listener" />
-	<context:component-scan base-package="cams7.siscom.ui" />
+	<context:component-scan base-package="br.com.cams7.siscom.listener" />
+	<context:component-scan base-package="br.com.cams7.siscom.ui" />
 
-	<context:component-scan base-package="cams7.apps.desk.component" />
+	<context:component-scan base-package="br.com.cams7.apps.desk.component" />
 
 	<!-- Define as configuracoes JPA (veja o arquivo persistence.xml) -->
 	<bean id="entityManagerFactory"
@@ -50,7 +50,7 @@
 	</bean>
 
 	<!-- Ativa a criacao dos repositorios no Spring Data JPA -->
-	<jpa:repositories base-package="cams7.siscom.*.repository" />
+	<jpa:repositories base-package="br.com.cams7.siscom.*.repository" />
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
