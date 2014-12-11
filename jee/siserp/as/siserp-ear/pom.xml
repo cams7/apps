@@ -85,7 +85,7 @@
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<configuration>
 					<filename>siserp.ear</filename>
-					<skip>true</skip>
+					<skip>false</skip>
 				</configuration>
 			</plugin>
 		</plugins>
