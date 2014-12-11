@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">POST JSON</string>
+    <string name="action_settings">Configurações</string>
+    <string name="msg_connected">Você está conectado</string>
+    <string name="msg_not_connected">Você não está conectado</string>
+    <string name="msg_error">Não funcionou!</string>
+    <string name="msg_received">Recebido!</string>
+    <string name="msg_data_sent">Dados enviados!</string>
+    <string name="msg_enter_some_data">Digite alguns dados!</string>
+    <string name="msg_is_connected">está conectado?</string>
+    <string name="person.name">Nome</string>
+    <string name="person.country">Pais</string>
+    <string name="person.twitter">Twitter</string>
+    <string name="btn_post">POST</string>
+
+</resources>

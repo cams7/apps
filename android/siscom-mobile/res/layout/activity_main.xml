@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvIsConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="#FF0000"
+        android:text="@+string/msg_is_connected"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="@+dimen/textview_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etName"
+            android:text="@+string/person.name" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="@+dimen/edittext_width"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvName"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="@+dimen/textview_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etCountry"
+            android:layout_below="@+id/tvName"
+            android:text="@+string/person.country" />
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="@+dimen/edittext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etName"
+            android:layout_toRightOf="@+id/tvCountry"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="@+dimen/textview_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/etTwitter"
+            android:layout_below="@+id/tvCountry"
+            android:text="@+string/person.twitter" />
+
+        <EditText
+            android:id="@+id/etTwitter"
+            android:layout_width="@+dimen/edittext_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etCountry"
+            android:layout_toRightOf="@+id/tvTwitter"
+            android:inputType="text" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="@+dimen/btn_post"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@+string/btn_post" />
+
+</LinearLayout>
