@@ -17,12 +17,12 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import cams7.apps.jee.AbstractBase;
-import cams7.apps.jpa.domain.BaseEntity;
-import cams7.apps.util.ApplicationException;
-import cams7.siscom.jpa.domain.entity.Member;
-import cams7.siscom.member.backing.MemberEditBean;
-import cams7.siscom.member.service.MemberService;
+import br.com.cams7.apps.jee.AbstractBase;
+import br.com.cams7.apps.jpa.domain.BaseEntity;
+import br.com.cams7.apps.util.ApplicationException;
+import br.com.cams7.siscom.jpa.domain.entity.Member;
+import br.com.cams7.siscom.member.backing.MemberEditBean;
+import br.com.cams7.siscom.member.service.MemberService;
 
 import com.mastertheboss.util.Resources;
 

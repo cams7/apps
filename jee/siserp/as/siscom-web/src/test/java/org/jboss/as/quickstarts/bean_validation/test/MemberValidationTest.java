@@ -33,8 +33,8 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import cams7.apps.jpa.domain.BaseEntity;
-import cams7.siscom.jpa.domain.entity.Member;
+import br.com.cams7.apps.jpa.domain.BaseEntity;
+import br.com.cams7.siscom.jpa.domain.entity.Member;
 
 /**
  * Simple tests for Bean Validator. Arquillian deploys an WAR archive to the

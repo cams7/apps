@@ -1,19 +1,18 @@
 <?xml version="1.0"?>
 <!-- Roda aplicação SISCOM -->
 <!--1º opção -->
-<!-- cd apps/SisCom-App -->
-<!-- mvn clean compile exec:java -Dexec.mainClass=cams7.siscom.Main -->
+<!-- cd /home/cesar/desenv/git/github/apps/jee/siserp/desk/siscom-app -->
+<!-- mvn clean compile exec:java -Dexec.mainClass=br.com.cams7.siscom.Main -->
 
 <!-- 2º opção -->
 <!-- cd apps -->
 <!-- mvn clean package -->
-<!-- java -jar SisCom-App/target/siscom-app.jar -->
+<!-- java -jar /home/cesar/desenv/git/github/apps/jee/siserp/desk/siscom-app/target/siscom-app.jar -->
 
 <!-- 3º opção -->
-<!-- cd apps -->
+<!-- cd /home/cesar/desenv/git/github/apps -->
 <!-- mvn clean package -->
-<!-- java -jar -Dlog4j.configuration=file:/home/cesar/desenv/git/github/apps/SisCom-App/src/main/resources/log4j.properties 
-	SisCom-App/target/siscom-app.jar -->
+<!-- java -jar -Dlog4j.configuration=file:/home/cesar/desenv/git/github/apps/jee/siserp/desk/siscom-app/src/main/resources/log4j.properties jee/siserp/desk/siscom-app/target/siscom-app-1.0-SNAPSHOT.jar -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -63,7 +62,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>cams7.siscom.Main</mainClass>
+							<mainClass>br.com.cams7.siscom.Main</mainClass>
 							<classpathPrefix>dependency-jars/</classpathPrefix>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
