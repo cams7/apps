@@ -9,7 +9,6 @@ import cams7.siscom.jpa.domain.entity.Member;
 import cams7.siscom.member.service.MemberService;
 
 @Named("memberRegistration")
-// @ManagedBean(name = "memberRegistration")
 @RequestScoped
 public class MemberEditBean extends BaseEditBean<MemberService, Member> {
 

@@ -52,6 +52,10 @@ public abstract class BaseEditBean<S extends BaseService<E, ?>, E extends BaseEn
 	// @InjectFacesContext
 	// private FacesContext facesContext;
 
+	public BaseEditBean() {
+		super();
+	}
+
 	public E getEntity() {
 		return entity;
 	}

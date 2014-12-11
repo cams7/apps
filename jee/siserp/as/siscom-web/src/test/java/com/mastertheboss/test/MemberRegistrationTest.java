@@ -1,13 +1,15 @@
 package com.mastertheboss.test;
 
-import static org.junit.Assert.assertNotNull;
-
 import java.util.logging.Logger;
+
+import static org.junit.Assert.assertNotNull;
 
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.as.quickstarts.cdi.injection.TranslateService;
+import org.jboss.as.quickstarts.cdi.injection.qualifier.English;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
@@ -15,36 +17,55 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import cams7.apps.jee.AbstractBase;
+import cams7.apps.jpa.domain.BaseEntity;
+import cams7.apps.util.ApplicationException;
 import cams7.siscom.jpa.domain.entity.Member;
 import cams7.siscom.member.backing.MemberEditBean;
+import cams7.siscom.member.service.MemberService;
 
 import com.mastertheboss.util.Resources;
 
 @RunWith(Arquillian.class)
 public class MemberRegistrationTest {
-   @Deployment
-   public static Archive<?> createTestArchive() {
-      return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Member.class, MemberEditBean.class, Resources.class)
-            .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
-   }
+	@Deployment
+	public static Archive<?> createTestArchive() {
+		return ShrinkWrap
+				.create(WebArchive.class, "test.war")
+				.addPackages(true, AbstractBase.class.getPackage(),
+						English.class.getPackage(),
+						TranslateService.class.getPackage())
+				.addClasses(ApplicationException.class, BaseEntity.class,
+						Member.class, MemberService.class, Resources.class,
+						MemberEditBean.class)
 
-   @Inject
-   MemberEditBean memberRegistration;
+				// enable JPA
+				.addAsResource("META-INF/test-persistence.xml",
+						"META-INF/persistence.xml")
+				// add sample data
+				.addAsResource("import.sql")
+				// enable CDI
+				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+				// Deploy our test datasource
+				.addAsWebInfResource("test-ds.xml", "test-ds.xml");
+	}
 
-   @Inject
-   Logger log;
+	@Inject
+	MemberEditBean memberRegistration;
 
-   @Test
-   public void testRegister() throws Exception {
-//      Member newMember = memberRegistration.getNewMember();
-//      newMember.setName("Jane Doe");
-//      newMember.setEmail("jane@mailinator.com");
-//      newMember.setPhoneNumber("2125551234");
-//      memberRegistration.register();
-//      assertNotNull(newMember.getId());
-//      log.info(newMember.getName() + " was persisted with id " + newMember.getId());
-   }
-   
+	@Inject
+	Logger log;
+
+	@Test
+	public void testRegister() throws Exception {
+//		Member newMember = memberRegistration.getEntity();
+//		newMember.setName("Jane Doe");
+//		newMember.setEmail("jane@mailinator.com");
+//		newMember.setPhoneNumber("2125551234");
+//		memberRegistration.salva();
+//		assertNotNull(newMember.getId());
+//		log.info(newMember.getName() + " was persisted with id "
+//				+ newMember.getId());
+	}
+
 }
