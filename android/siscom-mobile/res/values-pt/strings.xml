@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">POST JSON</string>
+    <string name="app_name">SisCom</string>
     <string name="action_settings">Configurações</string>
     <string name="msg_connected">Você está conectado</string>
     <string name="msg_not_connected">Você não está conectado</string>
@@ -10,9 +10,18 @@
     <string name="msg_data_sent">Dados enviados!</string>
     <string name="msg_enter_some_data">Digite alguns dados!</string>
     <string name="msg_is_connected">está conectado?</string>
-    <string name="person.name">Nome</string>
-     <string name="person.email">E-mail</string>
-    <string name="person.phoneNumber">Fone</string>
-    <string name="btn_post">POST</string>
+    <string name="bAddMember">Adiciona contato</string>
+    <string name="addContactTitle">Adiciona contato</string>
+    <string name="allAccounts">Todos os contatos</string>
+    <string name="contactCreationFailure">Ocorreu um erro ao tenta criar o contato, cheque os logs.</string>
+    <string name="member.email">E-mail</string>
+    <string name="member.name">Nome</string>
+    <string name="member.phoneNumber">Fone</string>
+    <string name="save">Salvar</string>
+    <string name="cbShowInvisible">Mostrar todos os contatos</string>
+    <string name="msg_list_empty">Nenhum contato cadastrado</string>
+    <string name="msg_name_empty">Informe o nome do contato</string>
+    <string name="msg_email_empty">Informe o e-mail do contato</string>
+    <string name="msg_phone_empty">Informe o telefone do contato</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.hmkcode.android.vo;
+package br.com.cams7.siscom.member.vo;
 
 public class Member {
 
@@ -7,6 +7,8 @@ public class Member {
 	private String name;
 	private String email;
 	private String phoneNumber;
+
+	private boolean active;
 
 	public Member() {
 		super();
@@ -49,10 +51,18 @@ public class Member {
 		this.phoneNumber = phoneNumber;
 	}
 
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	@Override
 	public String toString() {
-		return "Member [name=" + name + ", e-mail=" + email + ", phone="
-				+ phoneNumber + "]";
+		return "Member [id=" + id + ",name=" + name + ", e-mail=" + email
+				+ ", phone=" + phoneNumber + ", active=" + active + "]";
 	}
 
 }
