@@ -28,18 +28,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hmkcode.android.vo.Person;
+import com.hmkcode.android.vo.Member;
 
 public class MainActivity extends Activity implements OnClickListener {
 
 	private static final String STRING_EMPTY = "";
-	private static final String URL_POST = "http://192.168.0.160:8080/json_server/rest/person/json/add";
+	private static final String URL_POST = "http://192.168.0.160:8080/siscom/rest/member/add";
 
 	private TextView tvIsConnected;
-	private EditText etName, etCountry, etTwitter;
+
+	private EditText etName;
+	private EditText etEmail;
+	private EditText etPhoneNumber;
+
 	private Button btnPost;
 
-	private Person person;
+	private Member member;
 
 	/*
 	 * (non-Javadoc)
@@ -54,8 +58,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		// get reference to the views
 		tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
 		etName = (EditText) findViewById(R.id.etName);
-		etCountry = (EditText) findViewById(R.id.etCountry);
-		etTwitter = (EditText) findViewById(R.id.etTwitter);
+		etEmail = (EditText) findViewById(R.id.etEmail);
+		etPhoneNumber = (EditText) findViewById(R.id.etPhone);
 		btnPost = (Button) findViewById(R.id.btnPost);
 
 		// check if you are connected or not
@@ -71,7 +75,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	}
 
-	private static String POST(String url, Person person, String errorMsg) {
+	private static String POST(String url, Member person, String errorMsg) {
 		final String STRING_INPUT_STREAM = "InputStream";
 
 		InputStream inputStream = null;
@@ -88,9 +92,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			// 3. build jsonObject
 			JSONObject jsonObject = new JSONObject();
+			jsonObject.accumulate("id", person.getId());
 			jsonObject.accumulate("name", person.getName());
-			jsonObject.accumulate("country", person.getCountry());
-			jsonObject.accumulate("twitter", person.getTwitter());
+			jsonObject.accumulate("email", person.getEmail());
+			jsonObject.accumulate("phoneNumber", person.getPhoneNumber());
 
 			// 4. convert JSONObject to JSON to String
 			json = jsonObject.toString();
@@ -168,12 +173,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		@Override
 		protected String doInBackground(String... urls) {
 
-			person = new Person();
-			person.setName(etName.getText().toString());
-			person.setCountry(etCountry.getText().toString());
-			person.setTwitter(etTwitter.getText().toString());
+			member = new Member();
+			member.setName(etName.getText().toString());
+			member.setEmail(etEmail.getText().toString());
+			member.setPhoneNumber(etPhoneNumber.getText().toString());
 
-			return POST(urls[0], person, getString(R.string.msg_error));
+			return POST(urls[0], member, getString(R.string.msg_error));
 		}
 
 		// onPostExecute displays the results of the AsyncTask.
@@ -187,9 +192,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	private boolean validate() {
 		if (etName.getText().toString().trim().equals(STRING_EMPTY))
 			return false;
-		if (etCountry.getText().toString().trim().equals(STRING_EMPTY))
+		if (etEmail.getText().toString().trim().equals(STRING_EMPTY))
 			return false;
-		if (etTwitter.getText().toString().trim().equals(STRING_EMPTY))
+		if (etPhoneNumber.getText().toString().trim().equals(STRING_EMPTY))
 			return false;
 
 		return true;

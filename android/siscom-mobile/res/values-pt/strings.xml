@@ -11,8 +11,8 @@
     <string name="msg_enter_some_data">Digite alguns dados!</string>
     <string name="msg_is_connected">está conectado?</string>
     <string name="person.name">Nome</string>
-    <string name="person.country">Pais</string>
-    <string name="person.twitter">Twitter</string>
+     <string name="person.email">E-mail</string>
+    <string name="person.phoneNumber">Fone</string>
     <string name="btn_post">POST</string>
 
 </resources>

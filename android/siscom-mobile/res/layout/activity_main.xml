@@ -34,36 +34,36 @@
             android:inputType="text" />
 
         <TextView
-            android:id="@+id/tvCountry"
+            android:id="@+id/tvEmail"
             android:layout_width="@+dimen/textview_width"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/etCountry"
+            android:layout_alignBaseline="@+id/etEmail"
             android:layout_below="@+id/tvName"
-            android:text="@+string/person.country" />
+            android:text="@+string/person.email" />
 
         <EditText
-            android:id="@+id/etCountry"
+            android:id="@+id/etEmail"
             android:layout_width="@+dimen/edittext_width"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etName"
-            android:layout_toRightOf="@+id/tvCountry"
-            android:inputType="text" />
+            android:layout_toRightOf="@+id/tvEmail"
+            android:inputType="textEmailAddress" />
 
         <TextView
-            android:id="@+id/tvTwitter"
+            android:id="@+id/tvPhone"
             android:layout_width="@+dimen/textview_width"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/etTwitter"
-            android:layout_below="@+id/tvCountry"
-            android:text="@+string/person.twitter" />
+            android:layout_alignBaseline="@+id/etPhone"
+            android:layout_below="@+id/tvEmail"
+            android:text="@+string/person.phoneNumber" />
 
         <EditText
-            android:id="@+id/etTwitter"
+            android:id="@+id/etPhone"
             android:layout_width="@+dimen/edittext_width"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etCountry"
-            android:layout_toRightOf="@+id/tvTwitter"
-            android:inputType="text" />
+            android:layout_below="@+id/etEmail"
+            android:layout_toRightOf="@+id/tvPhone"
+            android:inputType="text|number" />
     </RelativeLayout>
 
     <Button
