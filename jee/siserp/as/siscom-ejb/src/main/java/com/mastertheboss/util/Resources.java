@@ -44,9 +44,4 @@ public class Resources {
 				.getName());
 	}
 
-	@Produces
-	@RequestScoped
-	public FacesContext produceFacesContext() {
-		return FacesContext.getCurrentInstance();
-	}
 }

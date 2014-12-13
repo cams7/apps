@@ -19,11 +19,12 @@
 			source, this example data source is just for development and testing! -->
 		<!-- The datasource is deployed as WEB-INF/cdi-quickstart-ds.xml, you can 
 			find it in the source at src/main/webapp/WEB-INF/cdi-quickstart-ds.xml -->
+
 		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
 		<class>org.jboss.as.quickstarts.cdi.service.ItemModel</class>
-
 		<class>br.com.cams7.siscom.jpa.domain.entity.Mercadoria</class>
 		<class>br.com.cams7.siscom.jpa.domain.entity.Member</class>
+
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="hibernate.show_sql" value="true" />
