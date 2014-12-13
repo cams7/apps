@@ -18,7 +18,7 @@ import br.com.cams7.apps.jpa.domain.BaseEntity;
 public abstract class BaseServiceImpl<E extends BaseEntity<ID>, ID extends Serializable>
 		extends BaseRepositoryImpl<E, ID> implements BaseService<E, ID> {
 
-	@PersistenceContext(unitName = "appSwingSpringUnit")
+	@PersistenceContext(unitName = "primary")
 	private EntityManager entityManager;
 
 	public BaseServiceImpl() {
