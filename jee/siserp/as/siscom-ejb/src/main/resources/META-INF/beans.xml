@@ -9,4 +9,8 @@
 	<decorators>
 		<class>org.jboss.as.quickstarts.cdi.decorator.StaffServiceDecorator</class>
 	</decorators>
+	<interceptors>
+		<class>org.jboss.as.quickstarts.cdi.interceptor.AuditInterceptor</class>
+		<class>org.jboss.as.quickstarts.cdi.interceptor.LoggingInterceptor</class>
+	</interceptors>	
 </beans>

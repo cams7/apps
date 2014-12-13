@@ -24,7 +24,7 @@ public class Resources {
 	// use @SuppressWarnings to tell IDE to ignore warnings about field not
 	// being referenced directly
 	@Produces
-	@PersistenceContext(unitName = "appSwingSpringUnit")
+	@PersistenceContext(unitName = "primary")
 	private EntityManager em;
 
 	@Produces
@@ -32,4 +32,5 @@ public class Resources {
 		return Logger.getLogger(injectionPoint.getMember().getDeclaringClass()
 				.getName());
 	}
+
 }
