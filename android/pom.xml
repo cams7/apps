@@ -125,7 +125,7 @@
 				</os>
 			</activation>
 			<properties>
-				<android.sdk.path>C:\Users\cesar\Desenv\Android\adt-bundle-windows-x86_64-20140702\sdk</android.sdk.path>
+				<android.sdk.path>C:\Users\cams7\Desenv\android\adt-bundle-windows-x86_64-20140702\sdk</android.sdk.path>
 			</properties>
 		</profile>
 		<profile>
